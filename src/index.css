@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 42 30% 97%;
+    --foreground: 210 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 25%;
+
+    --primary: 85 20% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 85 15% 90%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 85 20% 62%;
+    --accent-foreground: 210 15% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 85 15% 85%;
+    --input: 85 15% 85%;
+    --ring: 85 20% 62%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 20% 12%;
+    --foreground: 42 30% 97%;
+
+    --card: 210 18% 15%;
+    --card-foreground: 42 30% 97%;
+
+    --popover: 210 18% 15%;
+    --popover-foreground: 42 30% 97%;
+
+    --primary: 85 20% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 28%;
+    --secondary-foreground: 42 30% 97%;
+
+    --muted: 210 15% 20%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 85 20% 62%;
+    --accent-foreground: 42 30% 97%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 42 30% 97%;
+
+    --border: 210 15% 25%;
+    --input: 210 15% 25%;
+    --ring: 85 20% 62%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .pulse-soft {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+  }
+}
