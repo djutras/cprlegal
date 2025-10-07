@@ -113,10 +113,29 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--navy-blue) 0%, #2a4460 100%);
+    background:
+        linear-gradient(135deg, rgba(26, 46, 68, 0.65) 0%, rgba(42, 68, 96, 0.70) 100%),
+        url('images/hero-background.jpg') center center / cover no-repeat;
     color: var(--off-white);
     padding: 80px 0;
     text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 46, 68, 0.4) 0%, rgba(42, 68, 96, 0.45) 100%);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .cpr-title h1 {
@@ -126,25 +145,12 @@ nav {
     letter-spacing: 2px;
 }
 
-.cpr-definition {
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 40px;
-    background-color: rgba(248, 249, 250, 0.1);
-    padding: 20px 40px;
-    border-radius: 10px;
-    border-left: 4px solid var(--pulse-red);
-}
-
-.cpr-definition p {
-    font-size: 1.2rem;
-    margin: 5px 0;
-}
-
-.cpr-definition .letter {
-    font-weight: 700;
-    color: var(--pulse-red);
-    font-size: 1.4rem;
+.cpr-subtitle {
+    font-size: 1.3rem;
+    color: var(--light-blue);
+    margin-top: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .hero h2 {
@@ -215,8 +221,8 @@ nav {
 
 /* CTA Section */
 .cta {
-    background-color: var(--pulse-red);
-    color: var(--off-white);
+    background-color: #A2C6EB;
+    color: var(--navy-blue);
     padding: 80px 0;
     text-align: center;
 }
@@ -224,17 +230,18 @@ nav {
 .cta h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
+    color: var(--navy-blue);
 }
 
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(26, 46, 68, 0.75);
     padding: 50px 60px;
     border-radius: 12px;
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-group {
