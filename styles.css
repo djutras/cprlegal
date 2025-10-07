@@ -118,6 +118,7 @@ nav {
 /* Hero Section */
 .hero {
     background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%),
         linear-gradient(135deg, rgba(26, 26, 26, 0.65) 0%, rgba(42, 42, 42, 0.70) 100%),
         url('images/unnamed.jpg') center center / cover no-repeat;
     color: var(--off-white);
